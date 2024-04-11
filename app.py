@@ -1,5 +1,5 @@
 import streamlit as st
-from langchain_google_genai import GoogleGenerativeAI
+from langchain_google_genai.llms import GoogleGenerativeAI
 st.title('🦜🔗 LaGoSt App : Built with Langchain Google Gemini Streamlit')
 st.sidebar.title("LaGoSt App")
 openai_api_key = st.sidebar.text_input('Input Your Google Studio Gemini API Key. If you do not have you can create for free\
@@ -14,7 +14,7 @@ def generate_response(input_text):
   st.info(llm(input_text))
 
 with st.form('my_form'):
-  text = st.text_area('Enter text:', 'I am a software developer. Roast Me?')
+  text = st.text_area('Enter text:', 'I am a software developer. Roast Me.')
   submitted = st.form_submit_button('Submit')
   if not openai_api_key:
     st.warning('Please enter your Gemini API Key OR create for free  https://aistudio.google.com/app/apikey', icon='⚠')

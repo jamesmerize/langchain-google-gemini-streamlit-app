@@ -1,7 +1,7 @@
 from langchain.prompts import PromptTemplate
 from langchain.chains.llm import LLMChain
 from langchain_core.language_models.llms import LLM
-from langchain_google_genai import GoogleGenerativeAI
+from langchain_google_genai.llms import GoogleGenerativeAI
 from langchain.chains.sequential import SequentialChain
 
 
